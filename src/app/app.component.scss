@@ -1,11 +1,38 @@
 .wrap {
   display: flex;
   flex-direction: column;
+  max-width: 1024px;
+  width: 100%;
+  align-items: center;
+
+  .Filter {
+    display: flex;
+    padding: 10px 5px;
+    align-self: baseline;
+
+    div {
+      width: 30px;
+      height: 30px;
+      background-color: lightgrey;
+      margin-right: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}
+
+h1 {
+  background-color: lightgrey;
+  margin-bottom: 10px;
+  width: calc(100% - 30px);
+  padding: 10px 10px;
 }
 .bundeslaender-container {
   display: grid;
-  grid-template-columns: 33% 33% 33%;
-  width: 800px;
+  grid-template-columns: 33.3% 33.3% 33.3%;
 
   a {
     text-decoration: none;
@@ -13,11 +40,12 @@
   }
 
   .budesland-box {
-    border: 1px solid rgba($color: #000000, $alpha: 0.5);
+    border: 10px solid lightgrey;
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: space-evenly;
+    margin: 5px;
 
     h2 {
       padding: 10px 10px 0px 10px;
