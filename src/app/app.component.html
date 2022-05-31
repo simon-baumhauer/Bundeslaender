@@ -1,26 +1,9 @@
-<div class="wrap">
-  <h1>Bundesländer</h1>
-  <div class="bundeslaender-container">
-    <div *ngFor="let item of bundeslaender; index as i" class="budesland-box">
-      <a href="{{ bundeslaender[i].url }}">
-        <h2>{{ bundeslaender[i].name }}</h2>
-        <h3>{{ bundeslaender[i].population }} Million</h3>
-      </a>
-    </div>
-  </div>
-  <div class="Filter">
-    <div>A</div>
-    <div>B</div>
-    <div>D</div>
-    <div>E</div>
-    <div>G</div>
-    <div>L</div>
-    <div>M</div>
-    <div>N</div>
-    <div>R</div>
-    <div>S</div>
-    <div>T</div>
-    <div>V</div>
-    <div>W</div>
-  </div>
+<div>
+  <a
+    *ngFor="let bundesland of bundeslaender; index as i"
+    href="{{ bundeslaender[i].url }}"
+  >
+    <div>{{ bundeslaender[i].name }}</div>
+    <div>{{ bundeslaender[i].population }}</div>
+  </a>
 </div>
