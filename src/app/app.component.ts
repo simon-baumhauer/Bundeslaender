@@ -32,7 +32,7 @@ export class AppComponent {
       const firstLetter = land['name'].charAt(0);
 
       if (!filter || filter == firstLetter) {
-        content.innerHTML += generateLink(land, population);
+        content.innerHTML += this.generateLink(land, population);
       }
 
       if (!letters.includes(firstLetter)) {
@@ -40,11 +40,11 @@ export class AppComponent {
       }
     }
 
-    renderLetters();
+    this.renderLetters();
   }
 
   setFilter(letter) {
-    render(letter);
+    this.render(letter);
   }
 
   renderLetters() {
